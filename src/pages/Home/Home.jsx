@@ -22,7 +22,12 @@ export default function Home() {
   return (
     <Container className="AppHomeWrapper" maxWidth="false">
       <Box container>
-        <Particles height="100vh" width="auto" params={particlesConfig} />
+        <Particles
+          height="100vh"
+          maxHeight="100vh"
+          width="auto"
+          params={particlesConfig}
+        />
         <ThemeProvider theme={theme}>
           <Box
             sx={{

@@ -7,9 +7,6 @@ import SpeedDial from "@mui/material/SpeedDial";
 import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
 
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
@@ -20,36 +17,18 @@ export default function Dial() {
   const socialMedia = [
     {
       id: 0,
-      name: "FaceBook",
-      href: "https://www.facebook.com/",
-      src: <FacebookIcon fontSize="medium" />,
-    },
-    {
-      id: 1,
       name: "LinkedIn",
       href: "https://www.linkedin.com/",
       src: <LinkedInIcon fontSize="medium" />,
     },
     {
-      id: 2,
-      name: "Instagram",
-      href: "https://www.instagram.com/",
-      src: <InstagramIcon fontSize="medium" />,
-    },
-    {
-      id: 3,
-      name: "Twitter",
-      href: "https://twitter.com",
-      src: <TwitterIcon fontSize="medium" />,
-    },
-    {
-      id: 4,
+      id: 1,
       name: "GitHub",
       href: "https://github.com/shoxie13",
       src: <GitHubIcon fontSize="medium" />,
     },
     {
-      id: 5,
+      id: 2,
       name: "Email",
       href: `mailto: tarik.abdi13@gmail.com`,
       src: <EmailIcon fontSize="medium" />,
