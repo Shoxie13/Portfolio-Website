@@ -8,7 +8,7 @@ import "./App.css";
 function App() {
   return (
     <Box container>
-      <Box className="AppWrapper">
+      <Box container className="AppWrapper">
         <NavBar />
         <SideOpener />
         <Routing />

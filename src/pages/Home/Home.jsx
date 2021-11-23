@@ -21,74 +21,74 @@ theme = responsiveFontSizes(theme);
 export default function Home() {
   return (
     <Container className="AppHomeWrapper" maxWidth="false">
-      <Box container className="AppParticles">
-        <Particles height="100vh" params={particlesConfig} />
-      </Box>
-      <ThemeProvider theme={theme}>
-        <Box
-          sx={{
-            position: "absolute",
-            top: 16,
-            right: 30,
-            color: "white",
-          }}
-        >
-          <Typography
+      <Box container>
+        <Particles height="100vh" width="auto" params={particlesConfig} />
+        <ThemeProvider theme={theme}>
+          <Box
             sx={{
-              fontFamily: "Monospace",
-              letterSpacing: 6,
-              cursor: "default",
-              fontWeight: "bold",
-              zIndex: 999999,
+              position: "absolute",
+              top: 5,
+              right: 10,
+              color: "white",
             }}
-            variant="h4"
           >
-            Web Design
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            position: "absolute",
-            top: 45,
-            right: 35,
-            color: "white",
-          }}
-        >
-          <Typography
+            <Typography
+              sx={{
+                fontFamily: "Monospace",
+                letterSpacing: 6,
+                cursor: "default",
+                fontWeight: "bold",
+                zIndex: 999999,
+              }}
+              variant="h4"
+            >
+              Web Design
+            </Typography>
+          </Box>
+          <Box
             sx={{
-              fontFamily: "Monospace",
-              cursor: "default",
-              zIndex: 999999,
+              position: "absolute",
+              top: 35,
+              right: 15,
+              color: "white",
             }}
-            variant="h4"
           >
-            Portfolio
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            position: "absolute",
-            bottom: 16,
-            left: 30,
-            color: "white",
-          }}
-        >
-          <Typography
+            <Typography
+              sx={{
+                fontFamily: "Monospace",
+                cursor: "default",
+                zIndex: 999999,
+              }}
+              variant="h4"
+            >
+              Portfolio
+            </Typography>
+          </Box>
+          <Box
             sx={{
-              fontFamily: "Monospace",
-              letterSpacing: 6,
-              cursor: "default",
-              fontWeight: "bold",
-              zIndex: 999999,
+              position: "absolute",
+              bottom: 0,
+              left: 15,
+              color: "white",
             }}
-            variant="h4"
           >
-            Tareq Abdi
-          </Typography>
+            <Typography
+              sx={{
+                fontFamily: "Monospace",
+                letterSpacing: 6,
+                cursor: "default",
+                fontWeight: "bold",
+                zIndex: 999999,
+              }}
+              variant="h4"
+            >
+              Tareq Abdi
+            </Typography>
+          </Box>
+        </ThemeProvider>
+        <Box sx={{ position: "absolute", bottom: 10, right: 0 }}>
+          <Dial />
         </Box>
-      </ThemeProvider>
-      <Box sx={{ position: "absolute", bottom: 16, right: 0 }}>
-        <Dial />
       </Box>
     </Container>
   );
