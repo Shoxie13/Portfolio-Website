@@ -1,0 +1,9 @@
+.card {
+  overflow: hidden;
+  cursor: pointer;
+  transition: all ease 200ms;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}

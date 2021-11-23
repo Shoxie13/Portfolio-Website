@@ -1,0 +1,12 @@
+.AppHomeWrapper {
+  background: rgb(4, 5, 71) !important;
+  background: linear-gradient(
+    30deg,
+    rgba(4, 5, 71, 1) 48%,
+    rgba(2, 159, 203, 1) 52%
+  ) !important;
+  background-image: url(./pictures/centerBackground.png) !important;
+  background-size: 130% !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
