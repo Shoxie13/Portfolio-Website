@@ -44,7 +44,7 @@ export default function SideOpener() {
       id: 2,
       name: "About",
       icon: <InfoIcon sx={{ color: "white" }} />,
-      link: "#",
+      link: "/about",
     },
   ];
 
@@ -61,7 +61,7 @@ export default function SideOpener() {
               left: 65,
             }}
           >
-            <img src={logo} alt="Hello World" loading="lazy" />
+            <img src={logo} alt="HostLogo" loading="lazy" />
           </ImageListItem>
         </Box>
         <Box className="sideOpener">

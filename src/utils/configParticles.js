@@ -1,9 +1,7 @@
-import Footer from "../components/Dial/Dial";
-
 const particlesConfig = {
   particles: {
     number: {
-      value: 160,
+      value: 110,
       density: {
         enable: true,
         value_area: 800,
@@ -111,6 +109,5 @@ const particlesConfig = {
 
   retina_detect: true,
 };
-<Footer />;
 
 export default particlesConfig;

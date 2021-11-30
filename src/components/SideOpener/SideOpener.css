@@ -10,4 +10,5 @@
 
 .sideOpener :hover {
   background-color: rgb(62, 61, 61);
+  transform: scale(1.02);
 }

@@ -1,9 +1,9 @@
-.card {
+.card-ac-area {
   overflow: hidden;
   cursor: pointer;
   transition: all ease 200ms;
 }
 
-.card:hover {
+.card-ac-area:hover {
   transform: scale(1.02);
 }

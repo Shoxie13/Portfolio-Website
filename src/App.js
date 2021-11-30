@@ -1,6 +1,6 @@
 import NavBar from "./components/NavBar";
-import SideOpener from "./components/SideOpener/SideOpener";
 import Routing from "./utils/routing";
+
 import { Box } from "@mui/system";
 
 import "./App.css";
@@ -8,11 +8,8 @@ import "./App.css";
 function App() {
   return (
     <Box container>
-      <Box container className="AppWrapper">
-        <NavBar />
-        <SideOpener />
-        <Routing />
-      </Box>
+      <NavBar />
+      <Routing />
     </Box>
   );
 }

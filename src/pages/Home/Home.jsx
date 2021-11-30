@@ -1,17 +1,16 @@
-import React from "react";
-import Particles from "react-particles-js";
-import particlesConfig from "../../utils/configParticles";
+import React, { useEffect } from "react";
+import AOS from "aos";
 
 import {
   createTheme,
   responsiveFontSizes,
   ThemeProvider,
 } from "@mui/material/styles";
-
-import { Container, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-
 import Dial from "../../components/Dial/Dial";
+
+import ParticlesComponent from "../../components/Particles/ParticlesComponent";
 
 import "./Home.css";
 
@@ -19,82 +18,102 @@ let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <Container className="AppHomeWrapper" maxWidth="false">
-      <Box container>
-        <Particles
-          height="100vh"
-          maxHeight="100vh"
-          width="auto"
-          params={particlesConfig}
-        />
-        <ThemeProvider theme={theme}>
-          <Box
+    <Box container>
+      <ParticlesComponent />
+      <ThemeProvider theme={theme}>
+        <Box
+          sx={{
+            position: "absolute",
+            top: 5,
+            right: 10,
+            color: "white",
+          }}
+        >
+          <Typography
             sx={{
-              position: "absolute",
-              top: 5,
-              right: 10,
-              color: "white",
+              fontFamily: "Monospace",
+              letterSpacing: 6,
+              cursor: "default",
+              fontWeight: "bold",
             }}
+            variant="h4"
           >
-            <Typography
-              sx={{
-                fontFamily: "Monospace",
-                letterSpacing: 6,
-                cursor: "default",
-                fontWeight: "bold",
-                zIndex: 999999,
-              }}
-              variant="h4"
+            <div
+              data-aos="fade-up"
+              data-aos-anchor="#example"
+              data-aos-duration="2500"
             >
               Web Design
-            </Typography>
-          </Box>
-          <Box
+            </div>
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            position: "absolute",
+            top: 35,
+            right: 20,
+            color: "white",
+          }}
+        >
+          <Typography
             sx={{
-              position: "absolute",
-              top: 35,
-              right: 15,
-              color: "white",
+              fontFamily: "Monospace",
+              cursor: "default",
+              letterSpacing: 6,
             }}
+            variant="h4"
           >
-            <Typography
-              sx={{
-                fontFamily: "Monospace",
-                cursor: "default",
-                zIndex: 999999,
-              }}
-              variant="h4"
+            <div
+              data-aos="fade-up"
+              data-aos-anchor="#example"
+              data-aos-duration="2500"
             >
               Portfolio
-            </Typography>
-          </Box>
-          <Box
+            </div>
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: 10,
+            left: 15,
+            color: "white",
+          }}
+        >
+          <Typography
             sx={{
-              position: "absolute",
-              bottom: 0,
-              left: 15,
-              color: "white",
+              fontFamily: "Monospace",
+              letterSpacing: 6,
+              cursor: "default",
+              fontWeight: "bold",
             }}
+            variant="h4"
           >
-            <Typography
-              sx={{
-                fontFamily: "Monospace",
-                letterSpacing: 6,
-                cursor: "default",
-                fontWeight: "bold",
-                zIndex: 999999,
-              }}
-              variant="h4"
+            <div
+              data-aos="fade-right"
+              data-aos-anchor="#example"
+              data-aos-duration="2500"
             >
               Tareq Abdi
-            </Typography>
-          </Box>
-        </ThemeProvider>
-        <Box sx={{ position: "absolute", bottom: 10, right: 0 }}>
-          <Dial />
+            </div>
+          </Typography>
         </Box>
+      </ThemeProvider>
+
+      <Box sx={{ position: "absolute", bottom: 10, right: 0 }}>
+        <div
+          data-aos="fade-left"
+          data-aos-anchor="#example"
+          data-aos-duration="2500"
+        >
+          <Dial />
+        </div>
       </Box>
-    </Container>
+    </Box>
   );
 }

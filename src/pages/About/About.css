@@ -1,0 +1,22 @@
+.AboutWrapper {
+  color: white;
+}
+
+.IntroWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+}
+
+.IntroductionWrapper {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+  border: 1;
+  border-radius: 5;
+  border-color: white;
+}
