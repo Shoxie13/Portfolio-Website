@@ -37,7 +37,7 @@ const projects = [
     image: music,
     info: "The App is created with Angular helps browse through Spotify's newly released music, save favorite songs and listen to short cut outs. All that on your own private account.",
     alt: "Seneca Music Landing Page Pic",
-    extraInfo: "Seneca Music INFO",
+    extraInfo: "",
   },
   {
     id: 1,
@@ -46,7 +46,7 @@ const projects = [
     image: restaurant,
     info: "The App is created with React Native and it goes through a set of database where restaurants are stored. When restaurant is clicked you can see the name, type, grade and address of a restaurant.",
     alt: "New York Restaurants Landing Page Pic",
-    extraInfo: "New York Restaurants INFO",
+    extraInfo: "",
   },
   {
     id: 2,
