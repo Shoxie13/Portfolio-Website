@@ -18,6 +18,27 @@ import { StoreContext } from "../../contexts/StoreContext";
 import logo from "./pictures/HostLogo.png";
 import "./SideOpener.css";
 
+const links = [
+  {
+    id: 0,
+    name: "Home",
+    icon: <HomeM sx={{ color: "white" }} />,
+    link: "/home",
+  },
+  {
+    id: 1,
+    name: "Projects",
+    icon: <AccountTreeIcon sx={{ color: "white" }} />,
+    link: "/projects",
+  },
+  {
+    id: 2,
+    name: "About",
+    icon: <InfoIcon sx={{ color: "white" }} />,
+    link: "/about",
+  },
+];
+
 export default function SideOpener() {
   const {
     ui: [uiState, setUiState],
@@ -26,27 +47,6 @@ export default function SideOpener() {
   const handleDrawerClose = () => {
     setUiState({ ...uiState, drawer: false });
   };
-
-  const links = [
-    {
-      id: 0,
-      name: "Home",
-      icon: <HomeM sx={{ color: "white" }} />,
-      link: "/home",
-    },
-    {
-      id: 1,
-      name: "Projects",
-      icon: <AccountTreeIcon sx={{ color: "white" }} />,
-      link: "/projects",
-    },
-    {
-      id: 2,
-      name: "About",
-      icon: <InfoIcon sx={{ color: "white" }} />,
-      link: "/about",
-    },
-  ];
 
   return (
     <Box sx={{ color: "white" }}>

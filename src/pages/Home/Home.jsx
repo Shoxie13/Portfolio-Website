@@ -25,6 +25,7 @@ export default function Home() {
   return (
     <Box container>
       <ParticlesComponent />
+
       <ThemeProvider theme={theme}>
         <Box
           sx={{
@@ -43,11 +44,7 @@ export default function Home() {
             }}
             variant="h4"
           >
-            <div
-              data-aos="fade-up"
-              data-aos-anchor="#example"
-              data-aos-duration="2500"
-            >
+            <div data-aos="fade-up" data-aos-duration="2500">
               Web Design
             </div>
           </Typography>
@@ -68,11 +65,7 @@ export default function Home() {
             }}
             variant="h4"
           >
-            <div
-              data-aos="fade-up"
-              data-aos-anchor="#example"
-              data-aos-duration="2500"
-            >
+            <div data-aos="fade-up" data-aos-duration="2500">
               Portfolio
             </div>
           </Typography>
@@ -104,8 +97,7 @@ export default function Home() {
           </Typography>
         </Box>
       </ThemeProvider>
-
-      <Box sx={{ position: "absolute", bottom: 10, right: 0 }}>
+      <Box sx={{ position: "absolute", bottom: 13, right: 0 }}>
         <div
           data-aos="fade-left"
           data-aos-anchor="#example"

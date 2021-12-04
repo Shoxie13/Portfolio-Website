@@ -1,5 +1,7 @@
 .AboutWrapper {
   color: white;
+  justify-content: center;
+  align-items: center;
 }
 
 .IntroWrapper {
@@ -10,13 +12,14 @@
 }
 
 .IntroductionWrapper {
-  display: flex;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin-top: 30px;
+  display: block;
   justify-content: center;
   align-items: center;
   color: inherit;
-  border: 1;
-  border-radius: 5;
-  border-color: white;
+}
+
+.SkillsBox {
+  margin-top: 30px;
+  margin-bottom: 20px;
 }

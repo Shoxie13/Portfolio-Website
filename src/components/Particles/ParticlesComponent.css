@@ -1,9 +1,7 @@
 .ParticlesWrapper {
-  position: absolute;
+  position: fixed;
   top: 0px;
   bottom: 0px;
-  height: auto;
-  width: auto;
   background-image: url(./pictures/code.png);
   background-size: cover;
   background-position: center center;

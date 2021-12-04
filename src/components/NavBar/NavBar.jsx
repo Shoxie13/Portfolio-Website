@@ -30,10 +30,9 @@ export default function NavBar() {
       >
         <Toolbar>
           <IconButton
-            size="large"
             edge="start"
             color="inherit"
-            sx={{ mr: 2, border: 1, borderRadius: 5 }}
+            sx={{ border: 1, borderRadius: 3 }}
             onClick={handleDrawerOpen}
           >
             <MenuIcon fontSize="medium" />
