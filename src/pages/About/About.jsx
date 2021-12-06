@@ -4,7 +4,7 @@ import AOS from "aos";
 import { Container, Avatar, Typography, Box } from "@mui/material";
 
 import "./About.css";
-import wm from "./pictures/tarik1.jpeg";
+import wm from "./pictures/tarik1.png";
 
 import {
   createTheme,
@@ -24,7 +24,7 @@ export default function About() {
     <Container>
       <Box container className="AboutWrapper">
         <Box container className="IntroWrapper">
-          <Box sx={{ width: "250px" }}>
+          <Box sx={{ width: "200px" }}>
             <div
               data-aos="fade-right"
               data-aos-easing="ease-in-sine"
@@ -126,7 +126,7 @@ export default function About() {
                   variant="h6"
                 >
                   <ul>
-                    Programming Languages
+                    Languages
                     <li>JavaScript</li>
                     <li>C</li>
                     <li>C++</li>
