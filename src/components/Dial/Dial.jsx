@@ -18,7 +18,7 @@ export default function Dial() {
     {
       id: 0,
       name: "LinkedIn",
-      href: "https://linkedin.com/in/tabdi",
+      href: "https://www.linkedin.com/in/tabdi",
       src: <LinkedInIcon fontSize="medium" />,
     },
     {
