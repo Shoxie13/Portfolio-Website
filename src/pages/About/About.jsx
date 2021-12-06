@@ -4,7 +4,7 @@ import AOS from "aos";
 import { Container, Avatar, Typography, Box } from "@mui/material";
 
 import "./About.css";
-import wm from "./pictures/tarik1.png";
+import wm from "./pictures/tarik1.jpeg";
 
 import {
   createTheme,
