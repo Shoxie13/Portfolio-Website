@@ -14,7 +14,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function PopDialog(props) {
+export default function PopDialog() {
   const {
     ui: [uiState, setUiState],
   } = useContext(StoreContext);
@@ -39,7 +39,7 @@ export default function PopDialog(props) {
       >
         <DialogTitle onClose={handleDialogClose}>Modal title</DialogTitle>
         <DialogContent dividers>
-          <Typography gutterBottom>{props.value.extraInfo}</Typography>
+          <Typography>TEST TEST</Typography>
         </DialogContent>
         <DialogActions>
           <Button autoFocus onClick={handleDialogClose}>

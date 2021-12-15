@@ -38,7 +38,15 @@ export default function Dial() {
   return (
     <Container>
       <Box container sx={{ transform: "translateZ(0px)", flexGrow: 1 }}>
-        <SpeedDial ariaLabel="SpeedDial" icon={<SpeedDialIcon />}>
+        <SpeedDial
+          sx={{
+            "& .MuiSpeedDial-fab": {
+              bgcolor: "#7f47ff",
+            },
+          }}
+          ariaLabel="SpeedDial"
+          icon={<SpeedDialIcon />}
+        >
           {socialMedia.map((item, index) => (
             <SpeedDialAction
               href={item.href}

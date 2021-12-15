@@ -163,11 +163,7 @@ export default function Projects(props) {
                   </CardContent>
                 </CardActionArea>
                 <CardActions key={index}>
-                  {projects[index].extraInfo ? (
-                    <PopDialog key={projects[index]} value={projects[index]} />
-                  ) : (
-                    <AlertDrop />
-                  )}
+                  {projects[index].extraInfo ? <PopDialog /> : <AlertDrop />}
                 </CardActions>
               </Card>
             </Grid>

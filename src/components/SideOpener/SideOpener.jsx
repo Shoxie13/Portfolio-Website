@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
@@ -64,26 +63,45 @@ export default function SideOpener() {
             <img src={logo} alt="HostLogo" loading="lazy" />
           </ImageListItem>
         </Box>
-        <Box className="sideOpener">
-          {links.map((item, index) => {
+        <Box
+          id="menuOptions"
+          sx={{
+            height: "100%",
+            width: "250px",
+            bgcolor: "#292828",
+            "& .MuiListItem-root": {
+              bgcolor: "inherit",
+              border: 1,
+              borderRadius: 2,
+              borderColor: "lightgray",
+              mb: 1,
+              mt: 1,
+              mr: 2,
+              ml: 2,
+              width: "auto",
+              height: "40px",
+            },
+          }}
+        >
+          {links.map((item) => {
             return (
-              <Box key={item.id}>
-                <Link to={item.link} style={{ textDecoration: "none" }}>
-                  <ListItem button onClick={handleDrawerClose}>
-                    <ListItemIcon>{item.icon}</ListItemIcon>
-                    <ListItemText
-                      primary={item.name}
-                      primaryTypographyProps={{
-                        color: "white",
-                      }}
-                    />
-                    <Divider />
-                  </ListItem>
-                </Link>
-              </Box>
+              <Link
+                key={item.id}
+                to={item.link}
+                style={{ textDecoration: "none" }}
+              >
+                <ListItem button onClick={handleDrawerClose}>
+                  <ListItemIcon>{item.icon}</ListItemIcon>
+                  <ListItemText
+                    primary={item.name}
+                    primaryTypographyProps={{
+                      color: "white",
+                    }}
+                  />
+                </ListItem>
+              </Link>
             );
           })}
-          <Divider />
         </Box>
       </Drawer>
     </Box>
