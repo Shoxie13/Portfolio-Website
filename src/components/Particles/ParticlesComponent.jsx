@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Box } from "@mui/material";
+
 import Particles from "react-particles-js";
 import particlesConfig from "../../utils/configParticles";
 
@@ -7,11 +9,12 @@ import "./ParticlesComponent.css";
 
 export default function ParticlesComponent() {
   return (
-    <div>
+    <Box container className="ParticlesMainWrapper">
       <Particles
-        className="ParticlesWrapper"
+        width="100wh"
+        height="100vh"
         params={particlesConfig}
       ></Particles>
-    </div>
+    </Box>
   );
 }
