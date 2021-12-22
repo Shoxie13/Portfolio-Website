@@ -163,22 +163,9 @@ export default function About() {
               >
                 <div data-aos="zoom-in" data-aos-duration="1000">
                   Projects In Progress
-                </div>
-              </Typography>
-              <Typography
-                sx={{ fontFamily: "Ubuntu", cursor: "default" }}
-                variant="h6"
-              >
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-anchor-placement="center-bottom"
-                >
-                  <ul>
-                    <li>Weather-API & Weather-APP (nodeJS, React)</li>
-                    <li>ParkingApp (C++)</li>
-                    <li>Online Store App (nodeJS, React)</li>
-                  </ul>
+                  <li>Weather-API & Weather-APP (nodeJS, React)</li>
+                  <li>ParkingApp (C++)</li>
+                  <li>Online Store App (nodeJS, React)</li>
                 </div>
               </Typography>
             </Box>
