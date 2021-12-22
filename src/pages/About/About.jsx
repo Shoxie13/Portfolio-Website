@@ -71,7 +71,7 @@ export default function About() {
             </Typography>
             <Typography
               sx={{ fontFamily: "Ubuntu", cursor: "default" }}
-              variant="h6"
+              variant="h5"
             >
               <div
                 data-aos="fade-up"
@@ -123,7 +123,7 @@ export default function About() {
                     fontFamily: "Ubuntu",
                     cursor: "default",
                   }}
-                  variant="h6"
+                  variant="h5"
                 >
                   <ul>
                     Languages
@@ -139,7 +139,7 @@ export default function About() {
                     fontFamily: "Ubuntu",
                     cursor: "default",
                   }}
-                  variant="h6"
+                  variant="h5"
                 >
                   <ul>
                     Skills
@@ -163,9 +163,18 @@ export default function About() {
               >
                 <div data-aos="zoom-in" data-aos-duration="1000">
                   Projects In Progress
-                  <li>Weather-API & Weather-APP (nodeJS, React)</li>
-                  <li>ParkingApp (C++)</li>
-                  <li>Online Store App (nodeJS, React)</li>
+                  <Typography
+                    sx={{
+                      fontFamily: "Ubuntu",
+                      cursor: "default",
+                      fontSize: "bold",
+                    }}
+                    variant="h5"
+                  >
+                    <li>Weather-API & Weather-APP (nodeJS, React)</li>
+                    <li>ParkingApp (C++)</li>
+                    <li>Online Store App (nodeJS, React)</li>
+                  </Typography>
                 </div>
               </Typography>
             </Box>
