@@ -25,7 +25,6 @@ export default function Home() {
   return (
     <Box container>
       <ParticlesComponent />
-
       <ThemeProvider theme={theme}>
         <Box
           sx={{
@@ -37,15 +36,15 @@ export default function Home() {
         >
           <Typography
             sx={{
-              fontFamily: "Monospace",
-              letterSpacing: 6,
+              fontFamily: "Ubuntu",
               cursor: "default",
               fontWeight: "bold",
             }}
             variant="h4"
           >
             <div data-aos="fade-up" data-aos-duration="2500">
-              Web Design
+              &#8226;&#8226;&#32;&#8226;&#32; &#32;&#8226;&#32;&#8226;&#8226;
+              Web Design &#8226;&#32;&#8226;&#32;&#8226;
             </div>
           </Typography>
         </Box>
@@ -59,14 +58,15 @@ export default function Home() {
         >
           <Typography
             sx={{
-              fontFamily: "Monospace",
+              fontFamily: "Ubuntu",
               cursor: "default",
-              letterSpacing: 6,
+              fontWeight: "bold",
             }}
             variant="h4"
           >
             <div data-aos="fade-up" data-aos-duration="2500">
-              Portfolio
+              &#8226;&#8226;&#32;&#8226;&#32;&#32;&#8226;&#32;&#8226;&#8226;
+              Portfolio &#8226;&#32;&#8226;&#32;&#8226;
             </div>
           </Typography>
         </Box>
@@ -80,8 +80,7 @@ export default function Home() {
         >
           <Typography
             sx={{
-              fontFamily: "Monospace",
-              letterSpacing: 6,
+              fontFamily: "Ubuntu",
               cursor: "default",
               fontWeight: "bold",
             }}
@@ -92,12 +91,13 @@ export default function Home() {
               data-aos-anchor="#example"
               data-aos-duration="2500"
             >
-              Tareq Abdi
+              &#8226;&#32;&#8226;&#32;&#8226; Tareq Abdi
+              &#8226;&#8226;&#32;&#8226;&#8226;
             </div>
           </Typography>
         </Box>
       </ThemeProvider>
-      <Box sx={{ position: "absolute", bottom: 13, right: 0 }}>
+      <Box sx={{ position: "absolute", bottom: 15, right: 0 }}>
         <div
           data-aos="fade-left"
           data-aos-anchor="#example"

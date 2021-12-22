@@ -23,23 +23,24 @@ export default function About() {
   return (
     <Container>
       <Box container className="AboutWrapper">
-        <Box container className="IntroWrapper">
-          <Box sx={{ width: "200px" }}>
-            <div
-              data-aos="fade-right"
-              data-aos-easing="ease-in-sine"
-              data-aos-duration="1000"
-            >
-              <Avatar
-                sx={{ width: "auto", height: "auto" }}
-                alt="Avatar Logo"
-                src={wm}
-              />
-            </div>
-          </Box>
-          <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+          <Box container className="IntroWrapper">
+            <Box sx={{ width: "200px" }}>
+              <div
+                data-aos="fade-right"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="1000"
+              >
+                <Avatar
+                  sx={{ width: "auto", height: "auto" }}
+                  alt="Avatar Logo"
+                  src={wm}
+                />
+              </div>
+            </Box>
+
             <Typography
-              sx={{ ml: "20px", fontFamily: "Monospace", cursor: "default" }}
+              sx={{ ml: "20px", fontFamily: "Ubuntu", cursor: "default" }}
               variant="h4"
             >
               <div
@@ -50,13 +51,11 @@ export default function About() {
                 This is me! Yeah that's right, Tareq.
               </div>
             </Typography>
-          </ThemeProvider>
-        </Box>
-        <Box container className="IntroductionWrapper">
-          <ThemeProvider theme={theme}>
+          </Box>
+          <Box container className="IntroductionWrapper">
             <Typography
               sx={{
-                fontFamily: "Monospace",
+                fontFamily: "Ubuntu",
                 cursor: "default",
                 fontSize: "bold",
               }}
@@ -71,7 +70,7 @@ export default function About() {
               </div>
             </Typography>
             <Typography
-              sx={{ fontFamily: "Monospace", cursor: "default" }}
+              sx={{ fontFamily: "Ubuntu", cursor: "default" }}
               variant="h6"
             >
               <div
@@ -79,20 +78,23 @@ export default function About() {
                 data-aos-duration="1000"
                 data-aos-anchor-placement="center-bottom"
               >
-                Currently I live in Toronto, Canada. Being a student is a tough
-                job but I am managing it somehow. Below you can find the skills
-                that I have gathered through my years in college and on the
-                project page you can find what I have worked on in my spare
-                time.
+                Currently I live in Toronto, Canada. I started my journey in
+                Canada as a student in the beginning of 2020.
+                <hr /> Being a student is a tough job nowadays but I am managing
+                it somehow. My passion for web developing was born in my last
+                course that I took in college, learned a lot in it and yet I
+                have so much to explore going forward. I cannot wait to do that
+                and also work in a team that have the same vision as me.
+                <hr /> Below you can find the skills that I have gathered
+                through my years in college and on the project page you can find
+                what I have worked on in my spare time. <hr />
               </div>
             </Typography>
-          </ThemeProvider>
-        </Box>
-        <Box container className="SkillsBox">
-          <ThemeProvider theme={theme}>
+          </Box>
+          <Box container className="SkillsBox">
             <Typography
               sx={{
-                fontFamily: "Monospace",
+                fontFamily: "Ubuntu",
                 cursor: "default",
                 fontSize: "bold",
               }}
@@ -106,21 +108,19 @@ export default function About() {
                 Skills Set
               </div>
             </Typography>
-          </ThemeProvider>
-          <div data-aos="zoom-in" data-aos-duration="1000">
-            <Box
-              container
-              sx={{
-                border: 8,
-                borderRadius: 2,
-                display: "flex",
-                justifyContent: "space-around",
-              }}
-            >
-              <ThemeProvider theme={theme}>
+            <div data-aos="zoom-in" data-aos-duration="1000">
+              <Box
+                container
+                sx={{
+                  border: 7,
+                  borderRadius: 2,
+                  display: "flex",
+                  justifyContent: "space-around",
+                }}
+              >
                 <Typography
                   sx={{
-                    fontFamily: "Monospace",
+                    fontFamily: "Ubuntu",
                     cursor: "default",
                   }}
                   variant="h6"
@@ -136,7 +136,7 @@ export default function About() {
                 </Typography>
                 <Typography
                   sx={{
-                    fontFamily: "Monospace",
+                    fontFamily: "Ubuntu",
                     cursor: "default",
                   }}
                   variant="h6"
@@ -150,10 +150,40 @@ export default function About() {
                     <li>Programming</li>
                   </ul>
                 </Typography>
-              </ThemeProvider>
+              </Box>
+            </div>
+            <Box container className="IntroductionWrapper">
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  cursor: "default",
+                  fontSize: "bold",
+                }}
+                variant="h4"
+              >
+                <div data-aos="zoom-in" data-aos-duration="1000">
+                  Projects In Progress
+                </div>
+              </Typography>
+              <Typography
+                sx={{ fontFamily: "Ubuntu", cursor: "default" }}
+                variant="h6"
+              >
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-anchor-placement="center-bottom"
+                >
+                  <ul>
+                    <li>Weather-API & Weather-APP (nodeJS, React)</li>
+                    <li>ParkingApp (C++)</li>
+                    <li>Online Store App (nodeJS, React)</li>
+                  </ul>
+                </div>
+              </Typography>
             </Box>
-          </div>
-        </Box>
+          </Box>
+        </ThemeProvider>
       </Box>
     </Container>
   );

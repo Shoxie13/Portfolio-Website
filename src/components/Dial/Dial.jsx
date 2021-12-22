@@ -39,6 +39,7 @@ export default function Dial() {
     <Container>
       <Box container sx={{ transform: "translateZ(0px)", flexGrow: 1 }}>
         <SpeedDial
+          color="secondary"
           sx={{
             "& .MuiSpeedDial-fab": {
               bgcolor: "#7f47ff",

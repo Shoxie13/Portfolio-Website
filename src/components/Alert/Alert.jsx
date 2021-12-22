@@ -32,7 +32,7 @@ export default function AlertDrop() {
         <Alert
           onClose={handleAlertClose}
           severity="error"
-          sx={{ width: "100%" }}
+          sx={{ width: "100%", maxWidth: "70%" }}
         >
           This feature is currently disabled!
         </Alert>

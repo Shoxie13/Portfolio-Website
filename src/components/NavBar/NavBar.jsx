@@ -21,6 +21,7 @@ export default function NavBar() {
   return (
     <Box>
       <AppBar
+        id="back-to-top-anchor"
         edge="start"
         sx={{
           position: "static",

@@ -48,14 +48,14 @@ export default function SideOpener() {
   };
 
   return (
-    <Box sx={{ color: "white" }}>
+    <Box container>
       <Drawer open={uiState.drawer} onClose={handleDrawerClose}>
         <Box>
           <ImageListItem
             sx={{
               width: 100,
               height: 200,
-              position: "absolute",
+              position: "fixed",
               bottom: 0,
               left: 65,
             }}
@@ -80,6 +80,9 @@ export default function SideOpener() {
               ml: 2,
               width: "auto",
               height: "40px",
+            },
+            "& .MuiListItem-root:hover": {
+              transform: "scale(1.03)",
             },
           }}
         >

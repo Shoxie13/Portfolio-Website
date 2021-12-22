@@ -8,6 +8,13 @@ import CardActions from "@mui/material/CardActions";
 import CardActionArea from "@mui/material/CardActionArea";
 import Box from "@mui/system/Box";
 import Grid from "@mui/material/Grid";
+import PropTypes from "prop-types";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
+
+import { Zoom, Fab } from "@mui/material";
+import { styled } from "@mui/material/styles";
+
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 import AOS from "aos";
 
@@ -26,6 +33,14 @@ import cs from "./pictures/comingSoon.jpg";
 
 import "./Projects.css";
 
+const MyFab = styled(Fab)({
+  backgroundColor: "#7f47ff",
+  color: "white",
+  "&:hover": {
+    backgroundColor: "#4f15d6",
+  },
+});
+
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
@@ -35,16 +50,16 @@ const projects = [
     name: "Seneca Music",
     url: "https://seneca-music-eight.vercel.app",
     image: music,
-    info: "The App is created with Angular helps browse through Spotify's newly released music, save favorite songs and listen to short cut outs. All that on your own private account.",
+    info: "The App is created with Angular, it helps browse through Spotify's newly released music, save favorite songs and listen to short cut outs. All that on your own private account.",
     alt: "Seneca Music Landing Page Pic",
     extraInfo: "",
   },
   {
     id: 1,
-    name: "New York Restaurants",
+    name: "NY Restaurants",
     url: "https://my-app-inky.vercel.app",
     image: restaurant,
-    info: "The App is created with React Native and it goes through a set of database where restaurants are stored. When restaurant is clicked you can see the name, type, grade and address of a restaurant.",
+    info: "The App is created with React Native, it helps browse through restaurants in New York. When restaurant is clicked you can see the name, type, grade and address of a restaurant.",
     alt: "New York Restaurants Landing Page Pic",
     extraInfo: "",
   },
@@ -86,25 +101,66 @@ const projects = [
   },
 ];
 
+function ScrollTop(props) {
+  const { children } = props;
+
+  const trigger = useScrollTrigger({
+    disableHysteresis: false,
+    threshold: 100,
+  });
+
+  const handleClick = (event) => {
+    const anchor = (event.target.ownerDocument || document).querySelector(
+      "#back-to-top-anchor"
+    );
+
+    if (anchor) {
+      anchor.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  };
+
+  return (
+    <Zoom in={trigger}>
+      <Box
+        onClick={handleClick}
+        role="presentation"
+        sx={{ position: "fixed", bottom: 16, right: 16 }}
+      >
+        {children}
+      </Box>
+    </Zoom>
+  );
+}
+
+ScrollTop.propTypes = {
+  children: PropTypes.element.isRequired,
+};
+
 export default function Projects(props) {
   useEffect(() => {
     AOS.init();
   }, []);
 
   return (
-    <Container maxWidth="xll">
+    <Container>
       <Box
         container
-        className="ProjectsWrapper"
         sx={{
-          mb: "32px",
+          mb: "20px",
           color: "white",
         }}
       >
-        <Box sx={{ fontStyle: "oblique", mb: "20px" }}>
+        <Box
+          sx={{
+            mb: "20px",
+          }}
+        >
           <ThemeProvider theme={theme}>
             <Typography
-              sx={{ fontFamily: "Monospace", cursor: "default" }}
+              sx={{ fontFamily: "Ubuntu", cursor: "default" }}
               color="inherit"
               variant="h1"
             >
@@ -117,7 +173,7 @@ export default function Projects(props) {
               </div>
             </Typography>
             <Typography
-              sx={{ fontFamily: "Monospace", cursor: "default" }}
+              sx={{ fontFamily: "Ubuntu", cursor: "default" }}
               color="inherit"
               variant="h2"
             >
@@ -126,8 +182,8 @@ export default function Projects(props) {
                 data-aos-duration="1500"
                 data-aos-anchor-placement="center-bottom"
               >
-                This page is for all the projects that were made using Angular,
-                React or Other.
+                This page is for all the projects that I made using Angular,
+                React or other.
               </div>
             </Typography>
           </ThemeProvider>
@@ -139,16 +195,28 @@ export default function Projects(props) {
           columns={{ xs: 2, sm: 8, md: 12 }}
         >
           {Array.from(Array(projects.length)).map((_, index) => (
-            <Grid item xs={2} sm={4} md={4} key={index}>
+            <Grid
+              key={Math.floor(
+                Math.random() * (9999 - 0.12312312341 + 1) + 0.12312312341
+              )}
+              item
+              xs={2}
+              sm={4}
+              md={4}
+            >
               <Card>
                 <CardActionArea
-                  className="card-ac-area"
                   href={projects[index].url}
                   rel="noopener noreferrer"
                   target="_blank"
+                  sx={{
+                    transition: "0.5s",
+                    "&:hover": {
+                      transform: "scale(1.02)",
+                    },
+                  }}
                 >
                   <CardMedia
-                    className="card-image"
                     component="img"
                     image={projects[index].image}
                     alt={projects[index].alt}
@@ -169,6 +237,11 @@ export default function Projects(props) {
             </Grid>
           ))}
         </Grid>
+        <ScrollTop {...props}>
+          <MyFab size="medium" aria-label="scroll back to top">
+            <KeyboardArrowUpIcon />
+          </MyFab>
+        </ScrollTop>
       </Box>
     </Container>
   );
