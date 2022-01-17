@@ -47,9 +47,6 @@ export default function Dial() {
             "& .MuiSpeedDial-fab:hover": {
               bgcolor: "#4f15d6",
             },
-            "& .MuiSvgIcon-root": {
-              fontSize: "1.0rem",
-            },
           }}
           ariaLabel="SpeedDial"
           icon={<SpeedDialIcon />}

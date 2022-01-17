@@ -51,7 +51,7 @@ export default function Home() {
         <Box
           sx={{
             position: "absolute",
-            top: 35,
+            top: 50,
             right: 20,
             color: "white",
           }}
@@ -73,7 +73,7 @@ export default function Home() {
         <Box
           sx={{
             position: "absolute",
-            bottom: 50,
+            bottom: 35,
             left: 15,
             color: "white",
           }}
