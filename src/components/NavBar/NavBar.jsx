@@ -33,7 +33,7 @@ export default function NavBar() {
           <IconButton
             edge="start"
             color="inherit"
-            sx={{ border: 1, borderRadius: 3 }}
+            sx={{ border: 2, borderRadius: 3 }}
             onClick={handleDrawerOpen}
           >
             <MenuIcon fontSize="medium" />
