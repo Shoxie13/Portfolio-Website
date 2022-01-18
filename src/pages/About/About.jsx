@@ -143,7 +143,7 @@ export default function About() {
                 >
                   <ul>
                     Skills
-                    <li>Teamwork Skills</li>
+                    <li>Teamwork</li>
                     <li>Adaptability</li>
                     <li>Software Logic</li>
                     <li>Troubleshooting</li>
