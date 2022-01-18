@@ -29,6 +29,7 @@ import AlertDrop from "../../components/Alert/Alert";
 
 import music from "./pictures/music.jpg";
 import restaurant from "./pictures/restaurant.jpg";
+import management from "./pictures/management.jpg";
 import cs from "./pictures/comingSoon.jpg";
 
 import "./Projects.css";
@@ -51,7 +52,7 @@ const projects = [
     url: "https://seneca-music-eight.vercel.app",
     image: music,
     info: "The App is created with Angular, it helps browse through Spotify's newly released music, save favorite songs and listen to short cut outs. All that on your own private account.",
-    alt: "Seneca Music Landing Page Pic",
+    alt: "Seneca Music Picture",
     extraInfo: "",
   },
   {
@@ -60,16 +61,16 @@ const projects = [
     url: "https://my-app-inky.vercel.app",
     image: restaurant,
     info: "The App is created with React Native, it helps browse through restaurants in New York. When restaurant is clicked you can see the name, type, grade and address of a restaurant.",
-    alt: "New York Restaurants Landing Page Pic",
+    alt: "New York Restaurants Picture",
     extraInfo: "",
   },
   {
     id: 2,
-    name: "Coming Soon...",
-    url: "",
-    image: cs,
-    info: "The app is under construction.",
-    alt: "",
+    name: "Management App",
+    url: "https://nameless-stream-25703.herokuapp.com/",
+    image: management,
+    info: "This App gives you the opportunity to manage team of employees or just keep a personal record. You can create a FREE secure account that will give you access to all the features.",
+    alt: "Management App Picture",
     extraInfo: "",
   },
   {
