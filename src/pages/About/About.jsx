@@ -152,7 +152,15 @@ export default function About() {
                 </Typography>
               </Box>
             </div>
-            <Box container className="IntroductionWrapper">
+            <Box
+              container
+              sx={{
+                mt: "30px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <Typography
                 sx={{
                   fontFamily: "Ubuntu",
@@ -162,19 +170,28 @@ export default function About() {
                 variant="h4"
               >
                 <div data-aos="zoom-in" data-aos-duration="1000">
-                  Projects In Progress
-                  <Typography
+                  Projects In Development
+                  <Box
+                    container
                     sx={{
-                      fontFamily: "Ubuntu",
-                      cursor: "default",
-                      fontSize: "bold",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
                     }}
-                    variant="h5"
                   >
-                    <li>Weather-API & Weather-APP (nodeJS, React)</li>
-                    <li>ParkingApp (C++)</li>
-                    <li>Online Store App (nodeJS, React)</li>
-                  </Typography>
+                    <Typography
+                      sx={{
+                        fontFamily: "Ubuntu",
+                        cursor: "default",
+                        fontSize: "bold",
+                      }}
+                      variant="h5"
+                    >
+                      <li>Weather-API & Weather-APP (nodeJS, React)</li>
+                      <li>ParkingApp (C++)</li>
+                      <li>Online Store App (nodeJS, React)</li>
+                    </Typography>
+                  </Box>
                 </div>
               </Typography>
             </Box>
